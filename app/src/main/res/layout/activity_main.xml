@@ -156,18 +156,19 @@
                         android:orientation="horizontal"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1">
+                        android:layout_weight="0.96"
+                        android:weightSum="1">
 
                         <Switch
                             android:text="AM | FM"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/switchAMFM"
-                            android:layout_weight="1"
                             android:backgroundTint="@android:color/holo_green_light"
                             android:background="@android:color/holo_green_light"
                             android:textStyle="normal|bold"
-                            android:textSize="18sp" />
+                            android:textSize="18sp"
+                            android:layout_weight="0.93" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -193,7 +194,8 @@
                             android:background="@android:color/background_dark"
                             android:textColor="@android:color/holo_green_light"
                             android:textSize="36sp"
-                            android:textStyle="normal|bold" />
+                            android:textStyle="normal|bold"
+                            android:gravity="center" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -201,6 +203,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1">
+
+                        <Button
+                            android:text="CD Music"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/button2"
+                            android:background="?attr/colorButtonNormal" />
 
                         <Button
                             android:text="EJECT CD"
@@ -327,7 +336,16 @@
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1"></LinearLayout>
+                    android:layout_weight="1">
+
+                    <RatingBar
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ratingBar"
+                        android:clickable="false"
+                        android:background="?attr/colorButtonNormal"
+                        android:translationY="20dp" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -408,10 +426,45 @@
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"></LinearLayout>
+                android:layout_height="277dp"
+                android:layout_weight="1.00">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.85"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:text="Power Light"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/textView4"
+                        android:textColor="@android:color/holo_green_light"
+                        android:textStyle="bold"
+                        android:textSize="30sp"
+                        android:gravity="center"
+                        android:layout_weight="0.73" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.33">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@android:drawable/button_onoff_indicator_on"
+                        android:id="@+id/imageView"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
