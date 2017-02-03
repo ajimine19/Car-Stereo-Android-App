@@ -150,15 +150,17 @@
                         android:orientation="horizontal"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1">
+                        android:layout_weight="1"
+                        android:weightSum="1">
 
                         <TextClock
                             android:layout_width="match_parent"
-                            android:layout_height="48dp"
+                            android:layout_height="68dp"
                             android:id="@+id/textClock2"
                             android:textSize="30sp"
                             android:background="?attr/colorButtonNormal"
-                            android:gravity="center" />
+                            android:gravity="center"
+                            android:layout_weight="1" />
                     </LinearLayout>
 
                     <LinearLayout
