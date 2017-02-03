@@ -327,9 +327,10 @@
 
                     <SeekBar
                         android:layout_width="match_parent"
-                        android:layout_height="119dp"
+                        android:layout_height="62dp"
                         android:id="@+id/seekBar"
-                        android:backgroundTint="@android:color/holo_green_light" />
+                        android:background="@android:color/holo_green_light"
+                        android:translationY="20dp" />
                 </LinearLayout>
 
             </LinearLayout>
