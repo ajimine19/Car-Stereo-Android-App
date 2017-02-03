@@ -150,7 +150,16 @@
                         android:orientation="horizontal"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"></LinearLayout>
+                        android:layout_weight="1">
+
+                        <TextClock
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:id="@+id/textClock2"
+                            android:textSize="30sp"
+                            android:background="?attr/colorButtonNormal"
+                            android:gravity="center" />
+                    </LinearLayout>
 
                     <LinearLayout
                         android:orientation="horizontal"
@@ -162,13 +171,12 @@
                         <Switch
                             android:text="AM | FM"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="49dp"
                             android:id="@+id/switchAMFM"
                             android:backgroundTint="@android:color/holo_green_light"
                             android:background="@android:color/holo_green_light"
                             android:textStyle="normal|bold"
-                            android:textSize="18sp"
-                            android:layout_weight="0.93" />
+                            android:textSize="18sp" />
                     </LinearLayout>
 
                 </LinearLayout>
