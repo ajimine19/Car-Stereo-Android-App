@@ -2,15 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.up.cs371.ajimine19.carstereo.MainActivity"
-    android:weightSum="1">
+    tools:context="com.example.boylan19.myapplication.MainActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -41,7 +35,7 @@
                         android:text="1"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:id="@+id/button5"
+                        android:id="@+id/One"
                         android:layout_weight="1"
                         android:textStyle="normal|bold"
                         android:textSize="50sp"
@@ -58,7 +52,7 @@
                         android:text="2"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:id="@+id/button6"
+                        android:id="@+id/Two"
                         android:layout_weight="1"
                         android:textSize="50sp"
                         android:textStyle="normal|bold"
@@ -75,7 +69,7 @@
                         android:text="3"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:id="@+id/button7"
+                        android:id="@+id/Three"
                         android:layout_weight="1"
                         android:textSize="50sp"
                         android:textStyle="normal|bold"
@@ -92,7 +86,7 @@
                         android:text="4"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:id="@+id/button8"
+                        android:id="@+id/Four"
                         android:layout_weight="1"
                         android:textSize="50sp"
                         android:textStyle="normal|bold"
@@ -109,7 +103,7 @@
                         android:text="5"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:id="@+id/button9"
+                        android:id="@+id/Five"
                         android:layout_weight="1"
                         android:textStyle="normal|bold"
                         android:textSize="50sp"
@@ -126,7 +120,7 @@
                         android:text="6"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:id="@+id/button10"
+                        android:id="@+id/Six"
                         android:layout_weight="1"
                         android:textColor="@android:color/holo_green_light"
                         android:textSize="50sp"
@@ -150,17 +144,15 @@
                         android:orientation="horizontal"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:weightSum="1">
+                        android:layout_weight="1">
 
                         <TextClock
                             android:layout_width="match_parent"
-                            android:layout_height="68dp"
-                            android:id="@+id/textClock2"
+                            android:layout_height="48dp"
+                            android:id="@+id/Clock"
                             android:textSize="30sp"
                             android:background="?attr/colorButtonNormal"
-                            android:gravity="center"
-                            android:layout_weight="1" />
+                            android:gravity="center" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -171,14 +163,15 @@
                         android:weightSum="1">
 
                         <Switch
-                            android:text="AM | FM"
+                            android:text="  AM | FM"
                             android:layout_width="match_parent"
                             android:layout_height="49dp"
-                            android:id="@+id/switchAMFM"
+                            android:id="@+id/AMFM"
                             android:backgroundTint="@android:color/holo_green_light"
                             android:background="@android:color/holo_green_light"
                             android:textStyle="normal|bold"
                             android:textSize="18sp" />
+
                     </LinearLayout>
 
                 </LinearLayout>
@@ -196,10 +189,10 @@
                         android:layout_weight="1">
 
                         <TextView
-                            android:text="103.0 MHz"
+                            android:text="530.0 kHz"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/textView"
+                            android:id="@+id/radioDisplay"
                             android:textAlignment="center"
                             android:background="@android:color/background_dark"
                             android:textColor="@android:color/holo_green_light"
@@ -222,10 +215,11 @@
                             android:background="?attr/colorButtonNormal" />
 
                         <Button
-                            android:text="EJECT CD"
+                            android:text="Stop All Music"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/button"
+                            android:onClick="stopMusic"
                             android:background="@android:color/holo_green_light" />
                     </LinearLayout>
                 </LinearLayout>
@@ -261,7 +255,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 app:srcCompat="@android:drawable/arrow_up_float"
-                                android:id="@+id/imageButton5"
+                                android:id="@+id/UpStation"
                                 android:background="@android:color/holo_green_light" />
                         </LinearLayout>
 
@@ -275,7 +269,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 app:srcCompat="@android:drawable/arrow_down_float"
-                                android:id="@+id/imageButton6"
+                                android:id="@+id/DownStation"
                                 android:background="@android:color/holo_green_light" />
                         </LinearLayout>
                     </LinearLayout>
@@ -330,7 +324,7 @@
                     <SeekBar
                         android:layout_width="match_parent"
                         android:layout_height="62dp"
-                        android:id="@+id/seekBar"
+                        android:id="@+id/Volume"
                         android:background="@android:color/holo_green_light"
                         android:translationY="20dp" />
                 </LinearLayout>
@@ -352,7 +346,7 @@
                     <RatingBar
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ratingBar"
+                        android:id="@+id/Rater"
                         android:clickable="false"
                         android:background="?attr/colorButtonNormal"
                         android:translationY="20dp" />
@@ -428,11 +422,12 @@
                     android:layout_weight="1">
 
                     <ToggleButton
-                        android:text="ToggleButton"
+                        android:text="PowerButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/toggleButton"
+                        android:id="@+id/PowerButton"
                         android:background="@android:color/holo_green_light" />
+
                 </LinearLayout>
             </LinearLayout>
 
@@ -471,12 +466,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         app:srcCompat="@android:drawable/button_onoff_indicator_on"
-                        android:id="@+id/imageView"
-                        android:layout_weight="1" />
+                        android:id="@+id/PowerLight"
+                        android:layout_weight="1"
+                        android:visibility="visible" />
 
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
 </LinearLayout>

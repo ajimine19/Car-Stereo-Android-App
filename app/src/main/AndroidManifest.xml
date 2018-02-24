@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.up.cs371.ajimine19.carstereo">
+    package="com.example.boylan19.myapplication">
 
     <application
         android:allowBackup="true"
